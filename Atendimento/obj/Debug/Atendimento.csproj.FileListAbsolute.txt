@@ -1,0 +1,10 @@
+C:\Users\Pedro\Documents\ISP2020\C#\Atendimento\bin\Debug\Atendimento.exe.config
+C:\Users\Pedro\Documents\ISP2020\C#\Atendimento\bin\Debug\Atendimento.exe
+C:\Users\Pedro\Documents\ISP2020\C#\Atendimento\bin\Debug\Atendimento.pdb
+C:\Users\Pedro\Documents\ISP2020\C#\Atendimento\obj\Debug\Atendimento.csprojAssemblyReference.cache
+C:\Users\Pedro\Documents\ISP2020\C#\Atendimento\obj\Debug\Atendimento.Form1.resources
+C:\Users\Pedro\Documents\ISP2020\C#\Atendimento\obj\Debug\Atendimento.Properties.Resources.resources
+C:\Users\Pedro\Documents\ISP2020\C#\Atendimento\obj\Debug\Atendimento.csproj.GenerateResource.cache
+C:\Users\Pedro\Documents\ISP2020\C#\Atendimento\obj\Debug\Atendimento.csproj.CoreCompileInputs.cache
+C:\Users\Pedro\Documents\ISP2020\C#\Atendimento\obj\Debug\Atendimento.exe
+C:\Users\Pedro\Documents\ISP2020\C#\Atendimento\obj\Debug\Atendimento.pdb
