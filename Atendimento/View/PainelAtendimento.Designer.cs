@@ -37,9 +37,9 @@ namespace Atendimento
             this.label3 = new System.Windows.Forms.Label();
             this.guicheChama = new System.Windows.Forms.TextBox();
             this.btn_listaGuiche = new System.Windows.Forms.Button();
-            this.listSenha = new System.Windows.Forms.ListView();
-            this.listGuiche = new System.Windows.Forms.ListView();
             this.lbQtGuiches = new System.Windows.Forms.Label();
+            this.lstSenhasGeradas = new System.Windows.Forms.ListBox();
+            this.listaChamadaGuiche = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // btn_gerarSenha
@@ -50,7 +50,7 @@ namespace Atendimento
             this.btn_gerarSenha.TabIndex = 0;
             this.btn_gerarSenha.Text = "Gerar";
             this.btn_gerarSenha.UseVisualStyleBackColor = true;
-            this.btn_gerarSenha.Click += new System.EventHandler(this.btn_gerarSenha_Click);
+            this.btn_gerarSenha.Click += new System.EventHandler(this.btn_gerarsenha_click);
             // 
             // btn_listaSenha
             // 
@@ -70,6 +70,7 @@ namespace Atendimento
             this.btn_chamaSenha.TabIndex = 4;
             this.btn_chamaSenha.Text = "Chamar";
             this.btn_chamaSenha.UseVisualStyleBackColor = true;
+            this.btn_chamaSenha.Click += new System.EventHandler(this.btn_chamaSenha_Click);
             // 
             // label1
             // 
@@ -88,6 +89,7 @@ namespace Atendimento
             this.btn_adcGuiche.TabIndex = 7;
             this.btn_adcGuiche.Text = "Adicionar";
             this.btn_adcGuiche.UseVisualStyleBackColor = true;
+            this.btn_adcGuiche.Click += new System.EventHandler(this.btn_adcGuiche_Click);
             // 
             // label3
             // 
@@ -107,30 +109,13 @@ namespace Atendimento
             // 
             // btn_listaGuiche
             // 
-            this.btn_listaGuiche.Location = new System.Drawing.Point(477, 256);
+            this.btn_listaGuiche.Location = new System.Drawing.Point(473, 244);
             this.btn_listaGuiche.Name = "btn_listaGuiche";
             this.btn_listaGuiche.Size = new System.Drawing.Size(189, 23);
             this.btn_listaGuiche.TabIndex = 11;
             this.btn_listaGuiche.Text = "Lista Atendimento";
             this.btn_listaGuiche.UseVisualStyleBackColor = true;
-            // 
-            // listSenha
-            // 
-            this.listSenha.HideSelection = false;
-            this.listSenha.Location = new System.Drawing.Point(31, 99);
-            this.listSenha.Name = "listSenha";
-            this.listSenha.Size = new System.Drawing.Size(145, 151);
-            this.listSenha.TabIndex = 12;
-            this.listSenha.UseCompatibleStateImageBehavior = false;
-            // 
-            // listGuiche
-            // 
-            this.listGuiche.HideSelection = false;
-            this.listGuiche.Location = new System.Drawing.Point(415, 102);
-            this.listGuiche.Name = "listGuiche";
-            this.listGuiche.Size = new System.Drawing.Size(336, 148);
-            this.listGuiche.TabIndex = 13;
-            this.listGuiche.UseCompatibleStateImageBehavior = false;
+            this.btn_listaGuiche.Click += new System.EventHandler(this.btn_listaGuiche_Click);
             // 
             // lbQtGuiches
             // 
@@ -140,14 +125,30 @@ namespace Atendimento
             this.lbQtGuiches.Size = new System.Drawing.Size(0, 13);
             this.lbQtGuiches.TabIndex = 14;
             // 
+            // lstSenhasGeradas
+            // 
+            this.lstSenhasGeradas.FormattingEnabled = true;
+            this.lstSenhasGeradas.Location = new System.Drawing.Point(67, 114);
+            this.lstSenhasGeradas.Name = "lstSenhasGeradas";
+            this.lstSenhasGeradas.Size = new System.Drawing.Size(120, 134);
+            this.lstSenhasGeradas.TabIndex = 15;
+            // 
+            // listaChamadaGuiche
+            // 
+            this.listaChamadaGuiche.FormattingEnabled = true;
+            this.listaChamadaGuiche.Location = new System.Drawing.Point(428, 114);
+            this.listaChamadaGuiche.Name = "listaChamadaGuiche";
+            this.listaChamadaGuiche.Size = new System.Drawing.Size(250, 95);
+            this.listaChamadaGuiche.TabIndex = 16;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 308);
+            this.ClientSize = new System.Drawing.Size(722, 308);
+            this.Controls.Add(this.listaChamadaGuiche);
+            this.Controls.Add(this.lstSenhasGeradas);
             this.Controls.Add(this.lbQtGuiches);
-            this.Controls.Add(this.listGuiche);
-            this.Controls.Add(this.listSenha);
             this.Controls.Add(this.btn_listaGuiche);
             this.Controls.Add(this.guicheChama);
             this.Controls.Add(this.label3);
@@ -157,6 +158,7 @@ namespace Atendimento
             this.Controls.Add(this.btn_listaSenha);
             this.Controls.Add(this.btn_gerarSenha);
             this.Name = "Form1";
+            this.ShowIcon = false;
             this.Text = "Painel Atendimento";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -173,9 +175,9 @@ namespace Atendimento
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox guicheChama;
         private System.Windows.Forms.Button btn_listaGuiche;
-        private System.Windows.Forms.ListView listSenha;
-        private System.Windows.Forms.ListView listGuiche;
         private System.Windows.Forms.Label lbQtGuiches;
+        private System.Windows.Forms.ListBox lstSenhasGeradas;
+        private System.Windows.Forms.ListBox listaChamadaGuiche;
     }
 }
 

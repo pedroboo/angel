@@ -3,26 +3,30 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Atendimento.Model
 {
-    public class senha
+    public class Senha
     {
-        public int id;
-        public DateTime hrDataGerado { get; set; }
-        public DateTime hrAtendimento { get; set; }
+        private readonly int id;
+        private DateTime hrDataGerado { get; set; }
+        private DateTime hrAtendimento { get; set; }
         
         //construtor 
-        public senha()
+        public Senha(int id)
         {
-            id = this.id;
+            this.id = id;
             hrDataGerado = DateTime.Now;
+            hrAtendimento = new DateTime();
         }
 
-        public string dadosParciais()
+        public string dadosparcial()
         {
 
-            return $"{id} + {hrDataGerado.ToString("dd/MM/yyyy")} - {hrDataGerado.ToString("HH:mm:ss")}";
+            return 
+                $"{id} + {hrDataGerado.ToString("dd/MM/yyyy")} - {hrDataGerado.ToString("HH:mm:ss")}";
+        
         }
 
         public void atualizarHrAtendimento()
@@ -32,7 +36,7 @@ namespace Atendimento.Model
 
         public string dadosCompletos()
         {
-        return $"{dadosParciais()} - {hrAtendimento.ToString("dd/MM/yyyy")} - {hrAtendimento.ToString("HH:mm:ss")}";
+        return $"{dadosparcial()} - {hrAtendimento.ToString("dd/MM/yyyy")} - {hrAtendimento.ToString("HH:mm:ss")}";
         }
 
     }

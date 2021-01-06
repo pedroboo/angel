@@ -7,25 +7,31 @@ using Atendimento.Model;
 
 namespace Atendimento.Controller
 {
-    class senhas
+    class Senhas
     {
 
-        public int proximoAtendimento;
-        private readonly Queue<senhas> filaSenhas;
+        private int proximoAtendimento;
+        private readonly Queue<Senha> filaSenhas;
 
         
-        public senhas()
+        public Senhas()
         {
-            proximoAtendimento += 1;
-            filaSenhas = new Queue<senhas>();
+            proximoAtendimento = 1;
+            filaSenhas = new Queue<Senha>();
+        }
+        public void GerarSenhas()
+        {
+            filaSenhas.Enqueue(new Senha(proximoAtendimento++));
         }
 
-        public void gerar_senha ()
+        public int ProximoAtendimento
         {
-            senha ns = new senha();
-            ns.id++;
+            get { return proximoAtendimento; }
+        }
 
-
+        public Queue<Senha> FilaSenhas
+        {
+            get { return filaSenhas; }
         }
 
     }
